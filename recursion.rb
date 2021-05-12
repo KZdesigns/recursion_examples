@@ -1,10 +1,10 @@
 def upcase(string)
-    return string.upcase if string.length <= 1 #=> base case saying if the string is length = 1 then upcase the string
+    return string if string.length <= 1 #=> base case saying if the string is length = 1 then upcase the string
     string[0].upcase + upcase(string[1..-1]) #=> recursive case calling upcasing the first letter, and calling #upcase(string) on the rest of the string
 end
 
 def reverse(str) #=> base case if the str has a length of 1 ("a") then return str.reverse
-    return str.reverse if str.length <= 1 #=> checking base case
+    return str if str.length <= 1 #=> checking base case
     reverse(str[1..-1]) + str[0] #=> recursive case 
 end
 
